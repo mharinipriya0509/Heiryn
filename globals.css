@@ -1,0 +1,43 @@
+/* frontend/src/app/globals.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 250 250 250;
+  --foreground: 23 23 23;
+  --primary: 139 92 246;
+  --primary-foreground: 255 255 255;
+  --secondary: 245 245 245;
+  --accent: 249 115 22;
+  --muted: 115 115 115;
+}
+
+body {
+  background: rgb(var(--background));
+  color: rgb(var(--foreground));
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-violet-600 text-white px-6 py-3 rounded-xl font-medium
+           hover:bg-violet-700 transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-100 text-gray-900 px-6 py-3 rounded-xl font-medium
+           hover:bg-gray-200 transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-gray-100 p-6;
+  }
+  
+  .input {
+    @apply w-full px-4 py-3 rounded-xl border border-gray-200 
+           focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent
+           placeholder:text-gray-400;
+  }
+}
